@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5wk-project</title>
+	<style type="text/css">
+		body{margin: 0;}
+		section{height: 800px; position: relative;}
+		img{width: 150px; position: absolute; top:45px;}
+		#t2{position: absolute; width: 500px;}
+		#t3{position: absolute; width: 800px; top:190px;}
+		#t4{position: absolute; width: 480px;}
+		#t5{position: absolute; width: 300px; top:150px;left: 200px;}
+		#t6{position: absolute; width: 450px; top:100px;}
+
+		.on{background: url(1.png); background-size: cover;}
+		.tw{background: green;}
+		.th{background: red;}
+		.fo{background: red;}
+		.fi{background: black;}
+		.si{background: purple;}
+		#monitor{position: fixed; background: red; width: 0px; height:00px; right: 0px; top:0px; color: black; z-index: 9999;}
+
+		@keyframes ro{	to{transform: rotate(360deg);}	}
+		@keyframes le{	from{left:0px;} to{left: 280px;} }
+		@keyframes ri{	from{right:0px;} to{right: 100px;} }
+		@keyframes tt{	from{top:100px; opacity: 0} to{top:200px; opacity: 1} }
+		@keyframes ttt{	from{top:100px; opacity: 0} to{top:250px; opacity: 1} }
+		@keyframes tttt{ from{top:100px; opacity: 0} to{top:240px; opacity: 1} }
+		@keyframes ttttt{ from{top:100px; opacity: 0} to{top:450px; opacity: 1} }
+		@keyframes tttttt{ from{top:100px; opacity: 0} to{top:450px; opacity: 1} }				
+		@keyframes to{ from{bottom:0px;} to{top:300px;} }
+		@keyframes bo{ from{top:0px;} to{bottom:250px;} }
+
+
+		.text{width: 330px; font-style: 0.9em; line-height: 1.5;
+			color:black; position: absolute; opacity: 0;}
+
+		#txt1 { left:500px; top:100px; }
+		#txt2 { left:850px; top:500px; }
+		#txt3 { right:1050px; top:10px; color:white;}
+		#txt4 { left:850px; top:100px; }
+		#txt5 { left:730px; top:60px; color: white;}
+		#txt6 { right:300px; top:80px; color: white;}
+
+		#bb{ background: white; background-size: cover; background-attachment: fixed;}
+		#cc{ background: black; background-size: cover; background-attachment: fixed;}
+		#dd{ background: white; background-size: cover; background-attachment: scroll;}
+		#ee{ background-attachment: scroll;}
+		#ff{ background-color : black; background-size: cover; background-attachment: scroll;}
+	</style>
+
+</head>
+<body>
+
+	<audio src="HyunA(현아)- Babe(베베)" id="hh"></audio>
+
+	<section class="on">
+		<div class="text" id="txt1">
+		</div>
+	</section>
+	<section class="tw" id="bb">
+		<img src="a.jpg" id="t2">
+		<div class="text" id="txt2">
+			<mark>이름</mark> 김현아<br>
+			<mark>출생</mark> 1992년 6월 6일<br>
+			<mark>신체</mark> 164cm 44kg<br>
+			<mark>소속그룹</mark> 포미닛, 트러블메이커, 트리플 H<br>
+			<mark>소속사</mark> 피네이션<br>
+			<mark>수상</mark> 2015년 제24회 하이원 서울가요대상 댄스 퍼포먼스상<br>
+		</div>
+	</section>
+	<section class="th" id="cc">
+		<img src="b.png" id="t3">
+		<div class="text" id="txt3">
+			데뷔때부터 쉬지않고 셀 수 없이 많은 작업량을 보이면서
+			꾸준히 앨범을 내고 활동하고 있다.<br>
+			<br>
+			강렬한 댄스 음악을 주로 타이틀로 삼지만 수록곡들 중에는 잔잔한 느낌의 곡들도 많으니 꼭 들어보길.<br>
+		</div>		
+	</section>
+	<section class="fo" id="dd">
+		<img src="c.png" id="t4">
+		<div class="text" id="txt4">
+			날카로운 고양이상의 외모가 특징이다.<br>
+			빨아들일 것 같은 느낌의 강렬한 비주얼로 센 언니 인상의대표주자라고 볼 수 있다.<br>
+			<br>
+			순해보이면서도 새침한 인상을 주는 얼굴 덕에 진한 스모키 메이크업부터 과즙상 메이크업, 옅은 메이크업까지 고루고루 잘 어울린다. 또한 화장을 옅게 한 것과 진하게 한 얼굴이 상당히 다르며 민낯도 굉장히 예쁘다.<br>
+			<br>
+		</div>		
+	</section>
+	<section class="fi" id="ee">
+		<img src="d.png" id="t5">
+		<div class="text" id="txt5">
+			많은 팔로워를 보유하고 있고 잦은 업로드로 팬들과 소통하고 있다.
+		</div>		
+	</section>
+
+	<section class="si" id="ff">
+		<img src="e.gif" id="t6">
+		<div class="text" id="txt6">
+			다른 아이돌이나 선배 가수들이 꼽은 춤신춤왕 김현아.<br>
+			<br>
+			일단 보면 한번만 볼 수 없고, 보는 순간 코피터진다. 퐝!(⁎⁍̴̆Ɛ⁍̴̆⁎)<br>
+		</div>		
+	</section>
+
+	<div id="monitor"></div>
+
+	<script type="text/javascript">
+
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop + document.body.scrollTop;
+		monitor.innerHTML = t;
+
+		if(t > 80){
+			t2.style.animation = "le 1s forwards";
+			txt2.style.animation = "tt 1s forwards";
+		}else{
+			t2.style.animation = "";
+			txt2.style.animation = "";
+		}
+
+		if(t > 800){
+			t3.style.animation = "ri 2s forwards";
+			txt3.style.animation = "ttt 1.5s forwards";
+		}else{
+			t3.style.animation = "";
+			txt3.style.animation = "";
+		}
+
+		if(t > 1800){
+			t4.style.animation = "le 1s forwards";
+			txt4.style.animation = "tttt 1s forwards";
+		}else{
+			t4.style.animation = "";
+			txt4.style.animation = "";
+		}	
+
+		if(t > 2500){
+			t5.style.animation = "ro 1.8s forwards";
+			txt5.style.animation = "ttttt 2.4s forwards";
+		}else{
+			t5.style.animation = "";
+			txt5.style.animation = "";
+		}				
+
+		if(t > 3200){
+			t6.style.animation = "le 1s forwards";
+			txt6.style.animation = "tttttt 3.2s forwards";
+		}else{
+			t6.style.animation = "";
+			txt6.style.animation = "";
+		}	
+//		t2.style.animation = "ro 1s infinite";
+		
+//		if(t > 200){txt2.style.left = "300px";}
+	}
+	</script>
+
+<div class="footer">
+
+	<p class="small center">copyright & copy;
+
+
+	2019 HKNU communication design , KIM YE GI . all rights reserved.</p>
+
+ 
+
+	</div>
+	<style>
+
+	.small{font-size: 12px;} 
+
+
+	.center {text-align: center;}
+
+
+	.footer { background: black; height: 50px;
+		color: white; padding-top: 30px; }
+
+
+	</style>
+</body>
+</html>
